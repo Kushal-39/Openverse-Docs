@@ -66,6 +66,41 @@ Folder structure highlights:
   <File name=".github/workflows/build.yml" />
 </Files>
 
+## Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/DSA-Website.git
+cd DSA-Website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Open the application
+# Visit http://localhost:5173 in your browser
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+You can also build a docker image and run the build isolately, without any setup overhead.
+
+```bash
+# After cloning and changing directory
+docker build -t algorithima:latest .
+
+# To run the image
+docker run -d --name dsa_website \
+    -p 1234:80 \
+    algorithima:latest
+# Build will be running on port localhost:1234, if the port is busy, put another port in docker
+```
 ## Getting Started (Contributors)
 
 <Steps>
